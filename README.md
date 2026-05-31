@@ -55,7 +55,7 @@ The system is composed of three main subsystems:
 ## Models
 
 ### XGBoost
-- Wavelet feature extraction pipeline ((Daubechies-4, 5 levels)
+- Wavelet feature extraction pipeline (Daubechies-4, 5 levels)
 - 80/20 train/test split with 5-fold cross-validation
 - **Classification accuracy:** 97.25% (test) (cross-validation: 96.09% ± 0.70%)
 - Pain categories: 0-11
