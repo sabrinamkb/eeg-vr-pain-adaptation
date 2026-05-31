@@ -64,7 +64,7 @@ The system is composed of three main subsystems:
 - Same FFT and Wavelet feature extraction pipeline
 - MinMax scaling applied to normalize EEG signals
 - Hyperparameter tuning via RandomizedSearchCV
-- **Classification accuracy:** 97.89% (test), F1 = 0.99 (cross-validation: 95.78% ± 0.82%)
+- **Classification accuracy:** 97.89% (test) (cross-validation: 95.78% ± 0.82%)
 - Pain categories: 0-11
 
 Both models outperform comparable published benchmarks on EEG-based pain detection.
