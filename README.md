@@ -13,7 +13,7 @@ The system is composed of three main subsystems:
 
 **1. Machine Learning Subsystem (EE Team)**
 - Preprocesses EEG data (artifact removal, band-pass filtering, ICA)
-- Extracts features using FFT-based and Wavelet domain techniques
+- Extracts features using Wavelet domain technique
 - Trains XGBoost and LightGBM classifiers to categorize pain levels
 - Exports trained models in ONNX format for Unreal Engine integration
 
