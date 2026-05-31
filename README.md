@@ -1,4 +1,4 @@
-# Personalized Adaptive VR Experience Driven by EEG-Based Pain Recognition
+<img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/80b519c8-5587-48df-8cfa-44c53049961c" /># Personalized Adaptive VR Experience Driven by EEG-Based Pain Recognition
 ---
 ## Overview
 
@@ -52,3 +52,55 @@ The system is composed of three main subsystems:
 9. Export cleaned data as `.fif` and `.csv` for model training
 
 ---
+## Models
+
+### XGBoost
+- Feature extraction: FFT-based frequency band power (Delta, Theta, Alpha, Beta, Gamma)
+- 80/20 train/test split with 5-fold cross-validation
+- **Classification accuracy:** 97.25% (test) (cross-validation: 96.09% ± 0.70%)
+- Pain categories: 0-11
+
+### LightGBM
+- Same FFT and Wavelet feature extraction pipeline
+- MinMax scaling applied to normalize EEG signals
+- Hyperparameter tuning via RandomizedSearchCV
+- **Classification accuracy:** 97.89% (test), F1 = 0.99 (cross-validation: 95.78% ± 0.82%)
+- Pain categories: 0-11
+
+Both models outperform comparable published benchmarks on EEG-based pain detection.
+
+---
+## VR Integration
+
+- **Headset:** PICO 4 (6DOF tracking, Android-based)
+- **Engine:** Unreal Engine 5.3 with PICO SDK and ONNX Runtime plugin
+- **Communication:** Python prediction script → HTTP POST → UWS WebSocket server → Unreal Blueprint logic
+- **Avatar Response Mapping:**
+
+| Pain Level | Avatar Behavior |
+|---|---|
+| 0–3 (Slight) | Calm, gentle reassurance; peaceful forest environment |
+| 4–6 (Moderate) | Empathetic tone; guided breathing exercises |
+| 7–10 (Severe) | Urgent compassion; grounding techniques; visual dimming |
+
+---
+## Tech Stack
+
+| Category | Tools |
+|---|---|
+| EEG Processing | Python, MNE, AutoReject, PyWavelets |
+| Machine Learning | XGBoost, LightGBM, PyTorch, scikit-learn |
+| VR Development | Unreal Engine 5.3, PICO SDK, MetaHuman |
+| Avatar AI | ConvAI Plugin |
+| Communication | Flask API, UWS WebSocket Plugin |
+| Prototyping | Unity, ML-Agents Toolkit |
+
+---
+## Future Work
+
+- Real-time integration with live EEG hardware (32-channel MBRU system)
+- Deep learning models (CNN, RNN/LSTM) for improved temporal pattern recognition
+- Additional VR environment designs for different therapeutic contexts
+- Multi-gender avatar options
+- Multilingual support expansion beyond English and Arabic
+- Publication of a journal paper documenting the full project lifecycle
