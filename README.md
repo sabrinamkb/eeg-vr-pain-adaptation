@@ -1,4 +1,4 @@
-<img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/80b519c8-5587-48df-8cfa-44c53049961c" /># Personalized Adaptive VR Experience Driven by EEG-Based Pain Recognition
+# Personalized Adaptive VR Experience Driven by EEG-Based Pain Recognition
 ---
 ## Overview
 
