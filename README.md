@@ -11,18 +11,18 @@ The system was built in collaboration with **RIT Dubai**, **Mohammed Bin Rashid 
 
 The system is composed of three main subsystems:
 
-**1. Machine Learning Subsystem (EE Team)**
+**1. Machine Learning Subsystem**
 - Preprocesses EEG data (artifact removal, band-pass filtering, ICA)
 - Extracts features using Wavelet domain technique
 - Trains XGBoost and LightGBM classifiers to categorize pain levels
 - Exports trained models in ONNX format for Unreal Engine integration
 
-**2. VR Environment Subsystem (CIT Team)**
+**2. VR Environment Subsystem**
 - Built in Unreal Engine 5.3 with the PICO SDK for PICO 4 headset
 - Receives pain level predictions from the ML subsystem via a local REST API / WebSocket (UWS plugin)
 - Dynamically adjusts the virtual environment (lighting, ambient sound, visuals) based on predicted pain
 
-**3. Avatar Subsystem (CIT Team)**
+**3. Avatar Subsystem**
 - MetaHuman avatar created in Unreal Engine
 - Responds to pain categories with distinct facial expressions, body language, and dialogue
 - Dialogue powered by ConvAI plugin for empathetic, context-aware therapeutic responses
