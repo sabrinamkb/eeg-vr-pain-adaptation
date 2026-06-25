@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Al Bukhari"
+  given-names: "Sabrina"
+  orcid: "https://orcid.org/0009-0008-2811-8592"
+- family-names: "Zahran"
+  given-names: "Ahmad"
+- family-names: "Anvaj"
+  given-names: "Anzif"
+- family-names: "Hamdan"
+  given-names: "Muhammed"
+- family-names: "Atif"
+  given-names: "Ahmed"
+- family-names: "Mounsef"
+  given-names: "Jinane"
+  orcid: "https://orcid.org/0000-0003-0165-7170"
+- family-names: "Hadjiat"
+  given-names: "Yacine"
+  orcid: "https://orcid.org/0000-0002-2524-6854"
+title: "eeg-vr-pain-adaptation"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2026-06-25
+url: "https://github.com/sabrinamkb/eeg-vr-pain-adaptation"
